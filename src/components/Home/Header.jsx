@@ -16,6 +16,7 @@ export default function HeroSection() {
         src="/video.mp4"
         autoPlay
         loop
+         playsInline
         muted
       ></video>
 
@@ -26,7 +27,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
         {/* Title */}
         <h1
-          className="text-[85px] font-bold tracking-widest mb-2 text-primary dark:text-primary"
+          className="text-5xl font-bold tracking-widest mb-2 text-primary dark:text-primary"
           data-aos="fade-up"
         >
           SterlingSpace
