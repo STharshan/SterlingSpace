@@ -18,18 +18,25 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full font-poppins z-30 transition-all duration-300 
-      ${isScrolled 
-        ? "bg-white shadow-lg dark:bg-black" 
-        : "bg-transparent dark:bg-transparent"
-      } backdrop-blur-sm`}
+      ${isScrolled
+          ? "bg-white shadow-lg dark:bg-black"
+          : "bg-transparent dark:bg-transparent"
+        } backdrop-blur-sm`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
         {/* Logo */}
         <a href="#home" className="flex items-center">
+          {/* Light mode logo */}
           <img
             src="/logo.png"
             alt="ARCON Logo"
-            className="h-20 w-auto object-contain"
+            className="h-20 w-auto object-contain dark:hidden"
+          />
+          {/* Dark mode logo */}
+          <img
+            src="/dark.png"
+            alt="ARCON Logo"
+            className="h-20 w-auto object-contain hidden dark:block"
           />
         </a>
 
@@ -49,9 +56,8 @@ export default function Navbar() {
             >
               Services
               <FiChevronDown
-                className={`transition-transform ${
-                  showServices ? "rotate-180" : "rotate-0"
-                }`}
+                className={`transition-transform ${showServices ? "rotate-180" : "rotate-0"
+                  }`}
               />
             </button>
           </div>

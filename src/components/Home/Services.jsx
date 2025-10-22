@@ -69,10 +69,18 @@ export default function ServicesSection() {
           >
             {/* Image */}
             <div className="mb-6 flex items-center justify-center w-full h-52 md:h-64 rounded-xl overflow-hidden group-hover:shadow-xl transition-all duration-300">
+
+              {/* Light mode logo */}
               <img
                 src="/logo.png"
-                alt={service.title}
-                className="w-[80%] h-20 object-cover group-hover:scale-105 transition-transform duration-300"
+                alt="ARCON Logo"
+                className="h-20 w-auto object-contain dark:hidden"
+              />
+              {/* Dark mode logo */}
+              <img
+                src="/dark.png"
+                alt="ARCON Logo"
+                className="h-20 w-auto object-contain hidden dark:block"
               />
             </div>
 

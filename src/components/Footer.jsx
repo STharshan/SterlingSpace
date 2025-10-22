@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Logo + Description */}
         <div className="">
           <img
-            src="/logo.png"
+            src="/dark.png"
             alt="PPS Group Logo"
             className="h-20 mb-5 w-70 object-contain"
           />
